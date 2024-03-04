@@ -34,8 +34,22 @@ public class Main {
     }
 
     public static double perimetroRettangolo(double lato1, double lato2){
-
         return lato1*lato2;
+    }
+
+    public static int pariDispari(int inspected){
+        if(inspected%2==0){
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+
+    public static double calcolaAreaTriangolo(double latoA, double latoB, double latoC) {
+        double semiperimetro = (latoA + latoB + latoC) / 2.0;
+        double areaTriangolo = Math.sqrt(semiperimetro * (semiperimetro - latoA) * (semiperimetro - latoB) * (semiperimetro - latoC));
+
+        return areaTriangolo;
     }
 
     public static void main(String[] args) {
@@ -105,6 +119,8 @@ public class Main {
         double lato1 = 0;
         double lato2 = 0;
         Scanner scannerPerimetroRettangolo = new Scanner(System.in);
+        System.out.println("Esercizio sul rettangolo, inserisci i due lati.");
+
         System.out.println("Inserisci il primo lato del rettangolo in double:");
         if(scannerPerimetroRettangolo.hasNextDouble()){
             lato1 = scannerPerimetroRettangolo.nextDouble();
@@ -120,5 +136,57 @@ public class Main {
         }
 
         System.out.println("Output: " + perimetroRettangolo(lato1,lato2));
+
+        scannerPerimetroRettangolo.close();
+
+        Scanner scannerPariDispari = new Scanner(System.in);
+
+        int numeroPerPariDispari = 0;
+        System.out.println("Inserisci un numero per pariDispari:");
+        if(scannerPerimetroRettangolo.hasNextInt()){
+            numeroPerPariDispari = scannerPerimetroRettangolo.nextInt();
+        } else {
+            System.out.println("Numero non valido, inserisci un int");
+        }
+
+        System.out.println("Il numero inserito è " + numeroPerPariDispari + " il suo output nel metodo pariDispari è " +pariDispari(numeroPerPariDispari));
+        scannerPariDispari.close();
+
+        double latoa = 0;
+        double latob = 0;
+        double latoc = 0;
+
+        System.out.println("Esercizio sul triangolo, inserisci i tre lati.");
+        Scanner scannerEsercizioErone = new Scanner(System.in);
+        System.out.println("Inserisci il primo lato del triangolo in double:");
+        if(scannerEsercizioErone.hasNextDouble()){
+            latoa = scannerEsercizioErone.nextDouble();
+        } else {
+            System.out.println("Numero non valido, inserisci un double");
+        }
+
+        System.out.println("Inserisci il secondo lato del triangolo in double:");
+        if(scannerEsercizioErone.hasNextDouble()){
+            latob = scannerEsercizioErone.nextDouble();
+        } else {
+            System.out.println("Numero non valido, inserisci un double");
+        }
+
+        System.out.println("Inserisci il secondo lato del triangolo in double:");
+        if(scannerEsercizioErone.hasNextDouble()){
+            latob = scannerEsercizioErone.nextDouble();
+        } else {
+            System.out.println("Numero non valido, inserisci un double");
+        }
+
+        System.out.println("Inserisci il terzo lato del triangolo in double:");
+        if(scannerEsercizioErone.hasNextDouble()){
+            latoc = scannerEsercizioErone.nextDouble();
+        } else {
+            System.out.println("Numero non valido, inserisci un double");
+        }
+        scannerEsercizioErone.close();
+
+        System.out.println("L'area del triangolo è " + calcolaAreaTriangolo(latoa, latob, latoc));
     }
 }
