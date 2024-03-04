@@ -114,7 +114,6 @@ public class Main {
             System.out.print(esempioUsoMetododo[j] + ", ");
         }
 
-        scanner.close();
          /////////////////////////////////////////// ESERCIZIO 3 ////////////////////////////////////////////////////////
         double lato1 = 0;
         double lato2 = 0;
@@ -137,8 +136,6 @@ public class Main {
 
         System.out.println("Output: " + perimetroRettangolo(lato1,lato2));
 
-        scannerPerimetroRettangolo.close();
-
         Scanner scannerPariDispari = new Scanner(System.in);
 
         int numeroPerPariDispari = 0;
@@ -150,14 +147,15 @@ public class Main {
         }
 
         System.out.println("Il numero inserito è " + numeroPerPariDispari + " il suo output nel metodo pariDispari è " +pariDispari(numeroPerPariDispari));
-        scannerPariDispari.close();
 
         double latoa = 0;
         double latob = 0;
         double latoc = 0;
 
         System.out.println("Esercizio sul triangolo, inserisci i tre lati.");
+
         Scanner scannerEsercizioErone = new Scanner(System.in);
+
         System.out.println("Inserisci il primo lato del triangolo in double:");
         if(scannerEsercizioErone.hasNextDouble()){
             latoa = scannerEsercizioErone.nextDouble();
@@ -165,12 +163,6 @@ public class Main {
             System.out.println("Numero non valido, inserisci un double");
         }
 
-        System.out.println("Inserisci il secondo lato del triangolo in double:");
-        if(scannerEsercizioErone.hasNextDouble()){
-            latob = scannerEsercizioErone.nextDouble();
-        } else {
-            System.out.println("Numero non valido, inserisci un double");
-        }
 
         System.out.println("Inserisci il secondo lato del triangolo in double:");
         if(scannerEsercizioErone.hasNextDouble()){
