@@ -55,7 +55,7 @@ public class Main {
         arrayEsempio = inserisciInArray(arrayEsempio, "chi");
         for (int x = 0; x<arrayEsempio.length; x++){
             System.out.println(arrayEsempio[x]);
-        }
+        };
 
         //////////////////////////////////////////// ESERCIZIO 2 ///////////////////////////////////////////////////////
         String primaStringa = "";
