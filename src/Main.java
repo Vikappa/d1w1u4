@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Main {
 
-
     public static int moltiplica(int num1, int num2){
         return num1*num2;
     }
@@ -34,7 +33,7 @@ public class Main {
     }
 
     public static double perimetroRettangolo(double lato1, double lato2){
-        return lato1*lato2;
+        return (lato1+lato2)*2;
     }
 
     public static int pariDispari(int inspected){
@@ -53,7 +52,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
 
         //////////////////////////////////////////// ESERCIZIO 1 ///////////////////////////////////////////////////////
 
@@ -134,7 +132,7 @@ public class Main {
             System.out.println("Numero non valido, inserisci un double");
         }
 
-        System.out.println("Output: " + perimetroRettangolo(lato1,lato2));
+        System.out.println("Perimetro rettangolo: " + perimetroRettangolo(lato1,lato2));
 
         Scanner scannerPariDispari = new Scanner(System.in);
 
@@ -163,7 +161,6 @@ public class Main {
             System.out.println("Numero non valido, inserisci un double");
         }
 
-
         System.out.println("Inserisci il secondo lato del triangolo in double:");
         if(scannerEsercizioErone.hasNextDouble()){
             latob = scannerEsercizioErone.nextDouble();
@@ -177,6 +174,7 @@ public class Main {
         } else {
             System.out.println("Numero non valido, inserisci un double");
         }
+
         scannerEsercizioErone.close();
 
         System.out.println("L'area del triangolo è " + calcolaAreaTriangolo(latoa, latob, latoc));
